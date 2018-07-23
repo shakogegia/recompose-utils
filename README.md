@@ -1,5 +1,16 @@
 # Recompose utilities
 
+withEvents, withValidation for recompose
+
+install
+```
+npm i recompose-utils
+```
+or 
+```
+yarn add recompose-utils
+```
+
 ### withEvents
 
 import withEvents
