@@ -8,15 +8,11 @@ const defaultMessages = {
   required: 'Field is required!',
 }
 
-const getFieldValue = (data, field, isImmutable = true) => {
-  if (!isImmutable) {
-    return data[field]
-  }
-
-  return data.get(field)
+const getFieldValue = (data, field) => {
+  return data[field]
 }
 
-const HocValidate = (validationRules, isImmutable) => compose(
+const HocValidate = (validationRules) => compose(
   withState('errors', 'updateErrors', {}),
   withHandlers({
     validate: props => (formValues) => {
@@ -27,7 +23,7 @@ const HocValidate = (validationRules, isImmutable) => compose(
 
         fieldRules.forEach((rule) => {
           let isFieldOk = false
-          const fieldValue = getFieldValue(formValues, fieldName, isImmutable)
+          const fieldValue = getFieldValue(formValues, fieldName)
           const messages = validationRules[fieldName].messages || defaultMessages
           const { errors } = props
           switch (rule) {
