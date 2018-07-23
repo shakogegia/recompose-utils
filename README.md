@@ -1,6 +1,6 @@
 # Recompose utilities
 
-withEvents, withValidation for recompose
+`withEvents`, `withValidation` for react recompose
 
 install
 ```
