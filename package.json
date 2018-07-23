@@ -1,0 +1,15 @@
+{
+  "name": "recompose-utils",
+  "version": "1.0.0",
+  "description": "Utilities for recompose",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shalva.gegia@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "recompose": "^0.27.1"
+  }
+}
