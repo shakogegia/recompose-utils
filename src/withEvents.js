@@ -26,14 +26,9 @@ const HocEvents = ({ emitters = [], handlers = {} }) => compose(
     const eventHandlers = {}
 
     eventer.emitters.forEach((emitter) => {
-      // eventHandlers[emitter] = eventer.handlers[emitter]
-      //   ? eventer.handlers[emitter]
-      //   : () => {
-      //     eventer.handlers[emitter]()
-      //   }
-      eventHandlers[emitter] = () => {
+      eventHandlers[emitter] = (event) => {
         if (eventer.handlers[emitter]) {
-          return eventer.handlers[emitter]()
+          return eventer.handlers[emitter](event)
         }
 
         return () => false

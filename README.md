@@ -16,7 +16,7 @@ yarn add recompose-utils
 import withEvents
 
 ```js
-import { withEvents } from recompose-utils
+import { withEvents } from "recompose-utils"
 ```
 
 and than you have emmiters and handlers
